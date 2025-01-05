@@ -15,4 +15,4 @@ while (i <= 20) {
   i++;
 }
 
-console.log(sum)
+console.log(sum);
