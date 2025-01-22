@@ -11,6 +11,27 @@
 
 🧙‍♂️ Совет: обратите внимание на управление индексом текущего изображения — это ключ к успешному переключению изображений.
 */
+const image = document.querySelector('#web-tech-image');
+const buttonPrev = document.querySelector('#prev-button');
+const buttonNext = document.querySelector('#next-button');
+
+let i = 0;
+
+buttonPrev.addEventListener('click', function() {
+  i = i - 1;
+  if(i < 0) {
+    i = WEB_TECH_IMAGES.length - 1;
+  }
+  image.src = WEB_TECH_IMAGES[i];
+});
+
+buttonNext.addEventListener('click', function() {
+  i = i + 1;
+  if(i > WEB_TECH_IMAGES.length - 1) {
+    i = 0;
+  }
+  image.src = WEB_TECH_IMAGES[i];
+});
 
 const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/32f74d50-68d0-46aa-b035-7b3a5300d2c1_js-magic-logo.jpg',
