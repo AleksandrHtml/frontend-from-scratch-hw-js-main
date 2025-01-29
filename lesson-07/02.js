@@ -5,6 +5,10 @@
 
 function isNumeric(str) {
   // your code
+  if(Number(str)) {
+    return true;
+  }
+  return false;
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
